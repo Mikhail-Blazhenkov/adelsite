@@ -11,7 +11,29 @@
         width: 240px;
         height: auto;
     }
-</style>
+
+    .horizontal-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        font-size: 30px; /* размер шрифта в пикселях */
+    }
+
+    .horizontal-menu li {
+        margin-right: 10px;
+    }
+
+    .horizontal-menu li:last-child {
+        margin-right: 0;
+    }
+
+    .horizontal-menu a {
+        text-decoration: none; /* убирает подчеркивание */
+        color: black; /* цвет текста меню */
+    }
+
+    </style>
 </head>
 <body>
     <a href="{% url 'home' %}">
@@ -19,7 +41,7 @@
     </a>
     <header>
         <nav>
-            <ul>
+            <ul class="horizontal-menu">
                 <li><a href="/woman/">Woman</a></li>
                 <li><a href="/man/">Man</a></li>
                 <li><a href="/become/">Become</a></li>
