@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}PromoModelGroup{% endblock %}</title>
+    {% load static %}
+    <style>
+    .logo {
+        width: 240px;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+    <a href="{% url 'home' %}">
+        <img src="{% static 'images/logo.svg' %}" alt="Logo" class="logo">
+    </a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/woman/">Woman</a></li>
+                <li><a href="/man/">Man</a></li>
+                <li><a href="/become/">Become</a></li>
+                <li><a href="/contacts/">Contacts</a></li>
+                <li><a href="/school/">School</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
